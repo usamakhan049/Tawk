@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tawk</string>
+    <string name="internet_connection_error">Please make sure you have an active internet connection</string>
+    <string name="no_data_availble">No Data Available \n Please make sure you have an Active Internet Connection.</string>
+    <string name="save">Save</string>
+    <string name="followers">Followers: %d</string>
+    <string name="followings">Followings: %d</string>
+
+
+</resources>

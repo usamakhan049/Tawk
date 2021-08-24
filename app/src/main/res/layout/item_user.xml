@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.tawk.data.db.entity.User" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_4"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:elevation="20dp"
+
+        app:cardCornerRadius="10dp"
+        android:id="@+id/mcv_item">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_12">
+
+            <ImageView
+                android:id="@+id/iv_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="@dimen/margin_60"
+                app:layout_constraintHeight_max="@dimen/margin_60"/>
+
+            <TextView
+                android:id="@+id/iv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintBottom_toTopOf="@+id/iv_user_detail"
+                app:layout_constraintStart_toEndOf="@+id/iv_user_profile"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/iv_user_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_12"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:textSize="@dimen/text_11"
+                android:layout_marginTop="@dimen/margin_4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_user_profile"
+                app:layout_constraintTop_toBottomOf="@+id/iv_user_name"
+                tools:text="Description" />
+
+            <ImageView
+                android:id="@+id/iv_note_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_description_white_24"
+                app:tint="@color/icon_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="@dimen/margin_20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintWidth_max="@dimen/margin_20"
+                android:visibility="gone"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
